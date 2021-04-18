@@ -1,4 +1,4 @@
-name: Deploy CloudFormation Stack
+name: Deploy CloudFormation Stacks
 
 # Controls when the action will run.
 on:
@@ -30,7 +30,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ github.event.inputs.region }} 
 
-      - name: Deploy S3 Buckets CloudFormation Stack
+      - name: Deploy S3 Buckets CloudFormation Stacks
         id: s3-buckets
         uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3
         with:
