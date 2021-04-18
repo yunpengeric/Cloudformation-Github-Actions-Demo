@@ -35,7 +35,6 @@ jobs:
         uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3
         with:
           name:  s3-buckets
-          template: Infrastructure/s3-buckets/s3-buckets.yml
-          no-fail-on-empty-changeset: "1"
+          template: s3-buckets.yml
           parameter-overrides: >-
             BucketName=${{ github.event.inputs.bucketName }}
