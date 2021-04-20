@@ -68,7 +68,7 @@ We can write the step according to the README.
 
 ```yaml
 - name: Configure AWS Credentials
-	id: creds
+  id: creds
   uses: aws-actions/configure-aws-credentials@v1
   with:
      aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -113,7 +113,7 @@ on:
       BucketName:
         description: "Name your Bucket"
         required: true
-		default: "demo-bucket"
+	    default: "demo-bucket"
 ```
 
 Then we add `parameter-overrides` in the `Deploy to AWS CloudFormation` step.
@@ -124,7 +124,7 @@ Then we add `parameter-overrides` in the `Deploy to AWS CloudFormation` step.
   with:
     name: s3-buckets
     template: s3.yml
-		parameter-overrides: >-
+	parameter-overrides: >-
 	    BucketName=${{ github.event.inputs.bucketName }}
 ```
 
