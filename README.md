@@ -113,7 +113,7 @@ on:
       BucketName:
         description: "Name your Bucket"
         required: true
-				default: "demo-bucket"
+		default: "demo-bucket"
 ```
 
 Then we add `parameter-overrides` in the `Deploy to AWS CloudFormation` step.
@@ -183,6 +183,7 @@ Then navigate to the main page of  GitHub repository > Click `Actions` > In the 
 You should see the following pre-filled data > Enter your S3 bucket name (Please note an S3 bucket name is globally unique) > Run Workflow
 
 ![actionsimage](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7wj9nby1ca23s3ucdohn.png)
+
 After a minute or so, you will see that our S3 bucket has been successfully deployed. If you see any errors, please leverage GitHub logs and CloudFormation console to troubleshoot. 
 
 # Conclusion
