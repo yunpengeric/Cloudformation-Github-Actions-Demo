@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 
-Description: Using GitHub Actions to deploy CloudFormation stacks Demo
+Description: Github Actions Single S3 Bucket Deployment
 
 Parameters:
   BucketName:
